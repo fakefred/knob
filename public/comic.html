@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KNOB Comic</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/comic.css">
+    </head>
+    <body>
+        <header>
+            <h1>KNOB Comic</h1>
+            <h2>KNOB's Not One Blog</h2>
+        </header>
+        <div id="latest-container">
+            <button onclick="navigate('prev')">Prev</button>
+            <button onclick="navigate('random')">Random</button>
+            <button onclick="navigate('next')">Next</button>
+
+            <div id="content">
+                <h3 id="title"></h3>
+                <h4 id="info"></h4>
+                <img id="comic" src="" title="" alt="Error Loading Image">
+            </div>
+
+            <button onclick="navigate('prev')">Prev</button>
+            <input id="goto" type="number" value="" name="goto">
+            <button type="submit" onclick="go()">GOTO</button>
+            <button onclick="navigate('next')">Next</button>
+        </div>
+
+        <script src="/js/lib/axios.min.js"></script>
+        <script src="/comics/meta.js"></script>
+        <script src="/js/comic.js"></script>
+    </body>
+</html>

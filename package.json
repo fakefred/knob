@@ -1,0 +1,23 @@
+{
+  "name": "knob",
+  "version": "1.0.0",
+  "description": "Knob's Not One Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fakefred/knob.git"
+  },
+  "author": "fakefred",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fakefred/knob/issues"
+  },
+  "homepage": "https://github.com/fakefred/knob#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1"
+  }
+}
