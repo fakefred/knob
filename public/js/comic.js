@@ -31,12 +31,16 @@ function handleError(err) {
 }
 
 function navigate(param) {
-    if (param === 'next') {
+    if (param === 'next' && current < latest) {
         render(++ current);
-    } else if (param === 'prev') {
+    } else if (param === 'prev' && current > 1) {
         render(-- current);
     } else if (param === 'random') {
-        render(Math.ceil(Math.random() * latest));
+        let randComic = current;
+        while (randComic === current) {
+            randComic = Math.ceil(Math.random() * latest);
+        }
+        render(randComic);
     } else {
         // do nothing
     }
@@ -50,4 +54,13 @@ function go() {
 }
 
 // init
-render(latest);
+let id = window.location.hash;
+if (!id) {
+    render(latest);
+} else if (/\d+/.test(id)) {
+    id = parseInt(id.slice(1));
+    if (id > 0 && id <= latest) {
+        render(id);
+    }
+}
+

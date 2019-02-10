@@ -1,4 +1,44 @@
 body {
     font-family: 'Noto Sans', 'Droid Sans', sans-serif;
+    position: relative;
     font-size: 1em;
+    left: 50%;
+    width: 900px;
+    margin-left: -450px;
+    background-color: #90A4C8;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+#container {
+    position: relative;
+    left: 50%;
+    margin-left: -420px;
+    width: 840px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #aaa;
+}
+
+.nav {
+    position: relative;
+    margin: 24px;
+}
+
+#content {
+    margin-left: 24px;
+}
+
+#note {
+    margin-left: 24px;
+}
+
+#comic {
+    
 }
