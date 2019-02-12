@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FKFD Admin</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/admin.css">
+    </head>
+    <body>
+        <header class="box">
+            <div id="heading-left">
+                <h1>FKFD.ME</h1>
+                <h2>Admin Console</h2>
+                <p>Your Digital World Just Went Mobile<sup>&reg;&copy;&trade;</sup></p>
+            </div>
+        </header>
+        <div id="container" class="box">
+            <div id="upload">
+                <h3>Upload Comic</h3>
+                <form name="upload" action="/upload" method="POST">
+                    <h3 id="title"><input type="text" id="input-title" name="title" placeholder="Comic Title"></h3>
+                    <span id="info">
+                        <input type="number" id="month"  name="month" placeholder="M">/
+                        <input type="number" id="date"   name="date" placeholder="D">/
+                        <input type="number" id="year"   name="year" placeholder="Y"> <i>by</i>
+                        <input type="text"   id="author" name="author" placeholder="Author">
+                        <input class="ident" type="password" name="password" placeholder="password"><br><br>
+                    </span>
+                    <h5>Displayed Comic (single)</h5>
+                        <input class="url" type="text" id="disp-url" name="dispUrl" value="${UPSTREAM}/${SAFE_TITLE}.png"><br><br>
+                        <input class="url" type="text" id="disp-fn" name="dispFn" value="${SAFE_TITLE}.png"><br><br>
+                        <input class="url" type="text" id="hover" name="hover" placeholder="Hover Text">
+                    <h5>Original Files (if any)</h5>
+                        <input class="url" type="text" id="orig-url" name="origUrl" value="${UPSTREAM}/${SAFE_TITLE}.kra"><br><br>
+                        <input class="url" type="text" id="orig-fn" name="origFn" value="${SAFE_TITLE}.kra"><br><br>                
+                    <button id="submit" value="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="/js/lib/axios.min.js"></script>
+        <script src="/js/admin.js"></script>
+    </body>
+</html>

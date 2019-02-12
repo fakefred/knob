@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>KNOB</title>
+        <title>FKFD.ME</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/comic.css">
     </head>
     <body>
-        <header>
-            <h1>KNOB</h1>
-            <h2>KNOB's Not One Blog</h2>
+        <header class="box">
+            <div id="heading">
+                <h1>FKFD.ME</h1>
+                <p>Not a replica of xkcd<sup>&reg;&copy;&trade;</sup></p>
+            </div>
         </header>
-        
-        <a href="/blog">Blog</a>
-        <a href="/comic">Comic</a>
-        <a href="/about">About</a>
+        <div id="container" class="box">
+            <div class="nav">
+                <button onclick="navigate('prev')">&lt; Prev</button>
+                <button onclick="navigate('random')">Random</button>
+                <button onclick="navigate('next')">Next &gt;</button>
+            </div>
+            <div id="content">
+                <h3 id="title"></h3>
+                <h4 id="info"></h4>
+                <img id="comic" src="" title="" alt="For some reason it's not here">
+            </div>
+            <div class="nav">
+                <button onclick="navigate('prev')">&lt; Prev</button>
+                <input id="goto" type="number" value="" name="goto">
+                <button type="submit" onclick="go()">GOTO</button>
+                <button onclick="navigate('next')">Next &gt;</button>
+            </div>
+            <p id="note" class="small">Pro Tip: <del>Technically</del> you can goto a comic with URL hash.</p>
+        </div>
 
-        <script src="/js/index.js"></script>
+        <script src="/js/lib/axios.min.js"></script>
+        <script src="/comics/meta.js"></script>
+        <script src="/js/comic.js"></script>
     </body>
 </html>

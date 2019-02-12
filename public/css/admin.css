@@ -8,10 +8,13 @@ body {
     background-color: #96A8C8;
 }
 
-.small {
-    font-size: 0.8em;
-    color: #444;
+button {
+    background-color: #68A;
+    color: white;
+    border: solid white 1px;
+    font-size: 1.2em;
 }
+
 
 .box {
     display: block;
@@ -21,13 +24,21 @@ body {
     background-color: #fff;
 }
 
+.small {
+    font-size: 0.8em;
+    color: #444;
+}
+
 header {
     position: relative;
+    left: 0;
     width: 780px;
 }
 
-#heading {
+#heading-left {
     margin-left: 24px;
+    display: block;
+    width: 20em;
 }
 
 #container {
@@ -37,30 +48,36 @@ header {
     width: 100%;
 }
 
-button {
-    background-color: #68A;
-    color: white;
-    border: solid white 1px;
+
+#input-title {
+    width: 16em;
+    font-size: 1.5em;
+}
+
+#month {
+    width: 3em;
+}
+
+#date {
+    width: 3em;
+}
+
+#year {
+    width: 5em;
+}
+
+#author {
+    width: 10em;
+}
+
+.url {
+    width: 60%;
+    height: 1.4em;
     font-size: 1.2em;
 }
 
-.nav {
-    position: relative;
-    margin: 24px;
-}
-
-#content {
+#upload {
     text-align: center;
-}
-
-#note {
-    margin-left: 24px;
-}
-
-#comic {
-    display: block;
     position: relative;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 24px;
 }

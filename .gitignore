@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# actual comics
+public/comics/*
+
+# config file
+config.json
+
+# local automation
+knob-stage.sh
